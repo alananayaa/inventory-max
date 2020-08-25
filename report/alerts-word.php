@@ -47,7 +47,6 @@ $q=OperationData::getQByStock($product->id,$stock);
 }
 
 $word->addTableStyle('table1', $styleTable,$styleFirstRow);
-/// datos bancarios
 
 $filename = "alerts-".time().".docx";
 #$word->setReadDataOnly(true);
