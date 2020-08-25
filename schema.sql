@@ -1,8 +1,3 @@
-/*
-* Modelo de base de datos del sistema de Inventio Max v5.1
-* @author evilnapsis
-* @url http://evilnapsis.com/product/inventio-max
-*/
 create database inventiomax;
 use inventiomax;
 
@@ -63,12 +58,6 @@ create table product(
 	foreign key (user_id) references user(id)
 );
 
-/*
-person kind
-1.- Client
-2.- Provider
-3.- Contact
-*/
 create table person(
 	id int not null auto_increment primary key,
 	image varchar(255) not null,
@@ -191,9 +180,6 @@ insert into configuration(short,name,kind,val) value("imp-name","Nombre Impuesto
 insert into configuration(short,name,kind,val) value("imp-val","Valor Impuesto (%)",2,"16");
 insert into configuration(short,name,kind,val) value("currency","Simbolo de Moneda",2,"$");
 
-
-/* Nuevas tablas apartir de la version 4 */
-
 create table payment_type(
 	id int not null auto_increment not null primary key,
 	name varchar(50)
@@ -224,8 +210,6 @@ create table saving (
 	kind int,/*1. in, 2. out*/
 	created_at datetime
 );
-
-/* v6.1 */
 
 create table message(
 	id int not null auto_increment primary key,
